@@ -8,6 +8,7 @@ import Home from "./components/Layout/Home";
 import DetailPage from "./components/DetailPage";
 
 import "./App.css";
+import "./devices.min.css";
 
 class App extends Component {
   render() {

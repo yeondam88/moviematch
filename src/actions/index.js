@@ -53,7 +53,7 @@ const searchMovies = movies => ({
 export const fetchTrendMovies = () => dispatch => {
   axios
     .get(
-      `https://api.themoviedb.org/3/trending/movie/week?api_key=86fce8bfeb204a7e8c71d14290ae5016`
+      `https://api.themoviedb.org/3/trending/movie/week?api_key=86fce8bfeb204a7e8c71d14290ae5016&region=us`
     )
     .then(res => res.data.results)
     .then(movies => {
@@ -77,7 +77,7 @@ export const fetchMovieDetail = movie_id => dispatch => {
 export const fetchTopRatedMovies = () => dispatch => {
   axios
     .get(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1&region=us`
     )
     .then(res => res.data.results)
     .then(movies => {
@@ -89,7 +89,7 @@ export const fetchTopRatedMovies = () => dispatch => {
 export const fetchPopularMovies = () => dispatch => {
   axios
     .get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1&region=us`
     )
     .then(res => res.data.results)
     .then(movies => {
@@ -101,7 +101,7 @@ export const fetchPopularMovies = () => dispatch => {
 export const fetchNowPlayingMovies = () => dispatch => {
   axios
     .get(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1&region=us`
     )
     .then(res => res.data.results)
     .then(movies => {
@@ -113,7 +113,7 @@ export const fetchNowPlayingMovies = () => dispatch => {
 export const fetchUpComingMovies = () => dispatch => {
   axios
     .get(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US&page=1&region=us`
     )
     .then(res => res.data.results)
     .then(movies => {

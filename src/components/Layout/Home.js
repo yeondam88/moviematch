@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Search from "../Search";
 import Movies from "../Movies";
 
+import Fade from "react-reveal/Fade";
+
+import bg from "../../img/bg.png";
+
 class Home extends Component {
   render() {
     return (
@@ -21,8 +25,16 @@ class Home extends Component {
             </h1>
             <Search />
           </div>
+          <Fade bottom delay={800}>
+            <div className="phone-illustrate">
+              <div className="phone-big">
+                <img src={bg} width="253px" height="451px" alt="phone" />
+              </div>
+            </div>
+          </Fade>
         </section>
-        <section className="container mt-5">
+
+        <section className="container mt-5 content-area">
           <Movies />
         </section>
       </React.Fragment>
