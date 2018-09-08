@@ -11,6 +11,8 @@ import {
 
 const initialState = {
   movies: [],
+  heading: "Top Rated Movies",
+  isLoading: true,
   movie: {},
   errors: []
 };
@@ -20,32 +22,41 @@ export default (state = initialState, action) => {
     case FETCH_NOW_PLAYING:
       return {
         ...state,
-        movies: action.payload
+        movies: action.payload,
+        heading: "Now Playing Movies",
+        isLoading: false
       };
     case FETCH_TOP_RATED:
       return {
         ...state,
-        movies: action.payload
+        movies: action.payload,
+        isLoading: false
       };
     case FETCH_POPULAR_MOVIES:
       return {
         ...state,
-        movies: action.payload
+        movies: action.payload,
+        heading: "Popular Movies",
+        isLoading: false
       };
     case FETCH_UP_COMING_MOVIES:
       return {
         ...state,
-        movies: action.payload
+        movies: action.payload,
+        heading: "Up Coming Movies",
+        isLoading: false
       };
     case FETCH_TREND_MOVIES:
       return {
         ...state,
-        movies: action.payload
+        movies: action.payload,
+        isLoading: false
       };
     case FETCH_MOVIE_DETAIL:
       return {
         ...state,
-        movie: action.payload
+        movie: action.payload,
+        isLoading: false
       };
     case SEARCH_MOVIE_BY_TITLE:
       return {

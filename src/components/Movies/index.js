@@ -26,7 +26,7 @@ class Movies extends Component {
     } = this.props;
 
     if (movies === undefined || movies.length === 0) {
-      return <Spinner />;
+      return <Spinner styles={{ width: '100%',height: '40vh', opacity: '70%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}/>;
     } else {
       return (
         <React.Fragment>

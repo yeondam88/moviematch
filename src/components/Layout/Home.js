@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Search from "../Search";
 import Movies from "../Movies";
-
 import Fade from "react-reveal/Fade";
-
 import bg from "../../img/bg.png";
+
+import { connect } from "react-redux";
 
 class Home extends Component {
   render() {
@@ -12,7 +12,7 @@ class Home extends Component {
       <React.Fragment>
         <section className="main-search-area">
           <div className="container main-banner">
-            <h1 className="landing-page-title">
+            <h1 className="landing-page-title mb-5">
               Explore the world's largest catalog of
               <br /> Movies powered by The movie DB{" "}
               <span>
@@ -35,6 +35,7 @@ class Home extends Component {
         </section>
 
         <section className="container mt-5 content-area">
+          <h2 className="display-4 text-uppercase">{this.props.heading}</h2>
           <Movies />
         </section>
       </React.Fragment>
@@ -42,4 +43,8 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  heading: state.heading
+});
+
+export default connect(mapStateToProps)(Home);

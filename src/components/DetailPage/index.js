@@ -20,7 +20,16 @@ class DetailPage extends Component {
     const { id } = this.props.match.params;
     const { movie } = this.props;
     if (movie === undefined || Object.keys(movie).length === 0) {
-      return <Spinner />;
+      return (
+        <Spinner
+          styles={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh"
+          }}
+        />
+      );
     } else {
       return (
         <div className="content">
@@ -112,22 +121,23 @@ class DetailPage extends Component {
 
           <div className="bottom-content-section">
             <div className="container">
-              <h3>Top Billed Cast</h3>
-              <div className="row">
-                <div className="panel col">
-                  <Casting movie_id={id} />
+              <div className="genre-box mb-5">
+                <div className="genre-button go-back-btn">
+                  <i className="fas fa-arrow-left" />
+                  <Link to="/">Back</Link>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-2">
-                  <div className="genre-box">
-                    <div className="genre-button go-back-btn">
-                      <i className="fas fa-arrow-left" />
-                      <Link to="/">Back</Link>
-                    </div>
+              <div className="text-center">
+                <h3>Top Billed Casts</h3>
+                <div className="row">
+                  <div className="panel col">
+                    <Casting movie_id={id} />
                   </div>
                 </div>
-                <div className="col-9">
+              </div>
+
+              <div className="row">
+                <div className="col">
                   <div className="lyrics-container">
                     <p className="lead">{movie.overview}</p>
                   </div>
