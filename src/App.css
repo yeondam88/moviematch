@@ -180,11 +180,11 @@ i.fa-search {
   margin: 0.25em 0;
 }
 
-.lyrics-track-title {
+.movie-title {
   font-family: "Abril Fatface", cursive;
 }
 
-.lyrics-container {
+.movie-container {
   margin: 0 auto;
   line-height: 40px;
 }
@@ -229,6 +229,16 @@ i.fa-search {
   position: relative;
   margin: 10px;
   min-height: 139px;
+}
+
+.recommandation-inner-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.recommandation-inner-content a {
+  color: black;
 }
 
 .panel {

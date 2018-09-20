@@ -60,10 +60,8 @@ class DetailPage extends Component {
                     />
                   </div>
                   <div className="col" style={{ padding: "2rem" }}>
-                    <h1 className="lyrics-track-title">
-                      {movie.original_title}
-                    </h1>
-                    <a className="lyrics-track-artist">{movie.tagline}</a>
+                    <h1 className="movie-title">{movie.original_title}</h1>
+                    <a className="movie-tagline">{movie.tagline}</a>
 
                     <div className="movie-information">
                       <p>
@@ -138,7 +136,7 @@ class DetailPage extends Component {
 
               <div className="row">
                 <div className="col">
-                  <div className="lyrics-container">
+                  <div className="movie-container">
                     <p className="lead">{movie.overview}</p>
                   </div>
                 </div>
