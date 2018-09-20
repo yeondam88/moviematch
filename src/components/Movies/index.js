@@ -26,29 +26,40 @@ class Movies extends Component {
     } = this.props;
 
     if (movies === undefined || movies.length === 0) {
-      return <Spinner styles={{ width: '100%',height: '40vh', opacity: '70%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}/>;
+      return (
+        <Spinner
+          styles={{
+            width: "100%",
+            height: "40vh",
+            opacity: "70%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        />
+      );
     } else {
       return (
         <React.Fragment>
           <div className="movie-filter-container mb-5">
-            <div className="genre-box" onClick={() => fetchTopRatedMovies()}>
-              <div className="genre-button">
-                <span>Top Rated</span>
+            <div className="box" onClick={() => fetchTopRatedMovies()}>
+              <div className="box-button">
+                <span className="title">Top Rated</span>
               </div>
             </div>
-            <div className="genre-box" onClick={() => fetchNowPlayingMovies()}>
-              <div className="genre-button">
-                <span>Now Playing</span>
+            <div className="box" onClick={() => fetchNowPlayingMovies()}>
+              <div className="box-button">
+                <span className="title">Now Playing</span>
               </div>
             </div>
-            <div className="genre-box" onClick={() => fetchUpComingMovies()}>
-              <div className="genre-button">
-                <span>Up coming</span>
+            <div className="box" onClick={() => fetchUpComingMovies()}>
+              <div className="box-button">
+                <span className="title">Up coming</span>
               </div>
             </div>
-            <div className="genre-box" onClick={() => fetchPopularMovies()}>
-              <div className="genre-button">
-                <span>Popular</span>
+            <div className="box" onClick={() => fetchPopularMovies()}>
+              <div className="box-button">
+                <span className="title">Popular</span>
               </div>
             </div>
           </div>

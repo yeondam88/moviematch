@@ -13,11 +13,6 @@ class Navbar extends Component {
               <span className="logo">movieMatch</span>
             </a>
           </span>
-          <ul className="navbar-nav mr-sm-2">
-            <li className="nav-item" onClick={() => console.log("hi")}>
-              Trend Movies
-            </li>
-          </ul>
         </div>
       </nav>
     );

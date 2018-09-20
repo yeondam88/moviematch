@@ -35,7 +35,9 @@ class Home extends Component {
         </section>
 
         <section className="container mt-5 content-area">
-          <h2 className="display-4 text-uppercase">{this.props.heading}</h2>
+          <h2 className="display-4 text-uppercase category-title">
+            {this.props.heading}
+          </h2>
           <Movies />
         </section>
       </React.Fragment>

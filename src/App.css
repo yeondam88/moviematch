@@ -50,7 +50,7 @@ a.logo-link:hover {
 }
 
 .main-search-area {
-  background: url('./img/header-cover.jpg');
+  background: url("./img/header-cover.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,12 +60,12 @@ a.logo-link:hover {
 }
 
 .main-search-area:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 315px;
-  background: url('./img/wave-bottom.svg');
+  background: url("./img/wave-bottom.svg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 2;
@@ -149,7 +149,12 @@ i.fa-search {
   align-items: center;
 }
 
-.genre-box {
+.category-title {
+  font-family: "Abril Fatface", cursive;
+}
+
+.genre-box,
+.box {
   color: #2c3e50;
   background-color: #fff;
   transition-duration: 0.3s;
@@ -161,13 +166,23 @@ i.fa-search {
   font-weight: 500;
   text-align: left;
   padding: 0;
-  cursor: pointer;
   display: inline-block;
   margin: 10px 15px 0 0;
   height: 47px;
 }
 
-.genre-button {
+.box {
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: #ffafa7;
+  color: white;
+  transform: skewX(-6deg) scale(1.1);
+}
+
+.genre-button,
+.box-button {
   position: relative;
   background: transparent;
   padding: 8px 19px;
@@ -222,6 +237,11 @@ i.fa-search {
 .go-back-btn a {
   color: #2c3e50;
   margin-left: 5px;
+}
+
+.trailer-button {
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .recommandation-movie-bg {
@@ -298,7 +318,7 @@ li.card p {
   position: absolute;
   right: 30px;
   top: 20px;
-  transform: scale(.7) rotate(-12deg) translateX(50px);
+  transform: scale(0.7) rotate(-12deg) translateX(50px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,8 +330,12 @@ li.card p {
   align-items: center;
   border-radius: 38px;
   background: #fff;
-  -webkit-box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, .25), 0 2px 6px rgba(0, 21, 64, .14), 0 10px 20px rgba(0, 21, 64, .05);
-  box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, .25), 0 2px 6px rgba(0, 21, 64, .14), 0 10px 20px rgba(0, 21, 64, .05);
+  -webkit-box-shadow: inset 0 4px 7px 1px #fff,
+    inset 0 -5px 20px rgba(173, 186, 204, 0.25), 0 2px 6px rgba(0, 21, 64, 0.14),
+    0 10px 20px rgba(0, 21, 64, 0.05);
+  box-shadow: inset 0 4px 7px 1px #fff,
+    inset 0 -5px 20px rgba(173, 186, 204, 0.25), 0 2px 6px rgba(0, 21, 64, 0.14),
+    0 10px 20px rgba(0, 21, 64, 0.05);
 }
 
 .phone-big {
@@ -329,7 +353,7 @@ li.card p {
 .footer-social--item {
   font-size: 2em;
   margin: 0 10px 0 10px;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .footer-social--item:hover {

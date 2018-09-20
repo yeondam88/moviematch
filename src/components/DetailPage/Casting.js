@@ -32,7 +32,7 @@ class Casting extends Component {
         <ul className="top-billed-cast">
           {top_5_actors.map(c => {
             return (
-              <li className="card shadow">
+              <li key={c.id} className="card shadow">
                 <Link to={`/movie/${movie_id}`}>
                   <img
                     className="profile"

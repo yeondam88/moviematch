@@ -4,21 +4,59 @@ import Spinner from "../Layout/Spinner";
 import Recommandation from "./Recommandation";
 import Casting from "./Casting";
 import { connect } from "react-redux";
+import axios from "axios";
+import ModalVideo from "react-modal-video";
 
 import { fetchMovieDetail } from "../../actions";
+import { formatRunTime } from "../../utils";
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w342";
 const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";
 
 class DetailPage extends Component {
+  state = {
+    movie_trailer: null,
+    isOpen: false
+  };
+
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.fetchMovieDetail(id);
+    this.getMovieTrailers(id);
   }
+
+  getMovieTrailers = movie_id => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=86fce8bfeb204a7e8c71d14290ae5016&language=en-US`
+      )
+      .then(res => {
+        const trailers = res.data.results.filter(movie => {
+          return movie.type === "Trailer";
+        });
+        this.setState({ movie_trailer: trailers[0] });
+      });
+  };
+
+  openPlayer = () => {
+    this.setState({
+      isOpen: true
+    });
+  };
+
+  closePlayer = () => {
+    this.setState(
+      {
+        isOpen: false
+      },
+      () => console.log(this.state.isOpen)
+    );
+  };
 
   render() {
     const { id } = this.props.match.params;
     const { movie } = this.props;
+    const { movie_trailer, isOpen } = this.state;
     if (movie === undefined || Object.keys(movie).length === 0) {
       return (
         <Spinner
@@ -61,8 +99,14 @@ class DetailPage extends Component {
                   </div>
                   <div className="col" style={{ padding: "2rem" }}>
                     <h1 className="movie-title">{movie.original_title}</h1>
-                    <a className="movie-tagline">{movie.tagline}</a>
-
+                    <a className="movie-tagline">{movie.tagline} </a>
+                    <p>{formatRunTime(movie.runtime)}</p>
+                    <p>
+                      Box offices: $
+                      {movie.revenue
+                        .toFixed(2)
+                        .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
+                    </p>
                     <div className="movie-information">
                       <p>
                         <b>Overview</b>
@@ -71,11 +115,24 @@ class DetailPage extends Component {
                       <p className="font-weight-light font-italic mt-1">
                         <small>Release Date: {movie.release_date}</small>
                       </p>
+                      <div className="trailer-button" onClick={this.openPlayer}>
+                        <span style={{ marginRight: "10px" }}>
+                          <i className="fas fa-play" />
+                        </span>
+                        Play Trailer{" "}
+                      </div>
+                      {movie_trailer && (
+                        <ModalVideo
+                          isOpen={isOpen}
+                          videoId={movie_trailer.key}
+                          onClose={this.closePlayer}
+                        />
+                      )}
                     </div>
                     <div>Genres</div>
                     {movie.genres.map(genre => {
                       return (
-                        <div className="genre-box">
+                        <div key={genre.id} className="genre-box">
                           <div className="genre-button">
                             <span>{genre.name}</span>
                           </div>

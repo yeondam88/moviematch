@@ -6,3 +6,10 @@ export function truncate(text, limit) {
     return text.substring(0, shortened) + "...";
   }
 }
+
+export function formatRunTime(minutes) {
+  let hour = Math.floor(minutes / 60);
+  let minute = minutes % 60;
+  minute = minute < 10 ? "0" + minute : minute;
+  return `${hour} HR ${minute} MIN`;
+}
