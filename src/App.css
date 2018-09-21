@@ -49,6 +49,14 @@ a.logo-link:hover {
   cursor: pointer;
 }
 
+.github-animated {
+  transition: all .5s ease-in-out;
+}
+
+.github-animated:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
 .main-search-area {
   background: url("./img/header-cover.jpg");
   background-attachment: fixed;
