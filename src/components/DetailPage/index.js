@@ -100,7 +100,12 @@ class DetailPage extends Component {
                   <div className="col" style={{ padding: "2rem" }}>
                     <h1 className="movie-title">{movie.original_title}</h1>
                     <a className="movie-tagline">{movie.tagline} </a>
-                    <p>{formatRunTime(movie.runtime)}</p>
+                    <p>
+                      {formatRunTime(movie.runtime)} |{" "}
+                      <span>
+                        {movie.original_language === "en" ? "English" : ""}
+                      </span>
+                    </p>
                     <p>
                       Box offices: $
                       {movie.revenue
