@@ -1,5 +1,10 @@
 # Moviematch [Go!](https://movie-match.netlify.com)
-## powered by themoviedb.org API to search movies, and movie information.
+powered by themoviedb.org API to search movies, and movie information.
+<p>
+  <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633710/react-original.svg" width="50" />
+  <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633860/css3-original.svg" />
+  <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633872/bootstrap-plain.svg" width="50" />
+</p>
 
 ### Features 
 * search a movies
