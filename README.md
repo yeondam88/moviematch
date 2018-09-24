@@ -7,6 +7,9 @@ Built with <p>
   <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633872/bootstrap-plain.svg" width="50" />
 </p>
 
+## Demo
+<img src="images/optimized.gif" />
+
 ### Features 
 * search a movies 😎
 * see movie detail page 😍
