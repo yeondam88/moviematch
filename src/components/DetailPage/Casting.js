@@ -29,7 +29,7 @@ class Casting extends Component {
       return <Spinner />;
     } else {
       return (
-        <ul className="top-billed-cast">
+        <ul className="top-billed-cast row">
           {top_5_actors.map(c => {
             return (
               <li key={c.id} className="card shadow">

@@ -90,14 +90,14 @@ class DetailPage extends Component {
                 }}
               >
                 <div className="row">
-                  <div className="col-5">
+                  <div className="col-5 movie-poster">
                     <img
                       style={{ height: "100%" }}
                       src={`${POSTER_PATH}${movie.poster_path}`}
                       alt={movie.title}
                     />
                   </div>
-                  <div className="col" style={{ padding: "2rem" }}>
+                  <div className="col movie-info-section">
                     <h1 className="movie-title">{movie.original_title}</h1>
                     <a className="movie-tagline">{movie.tagline} </a>
                     <p>

@@ -9,7 +9,7 @@ const POSTER_PATH = "https://image.tmdb.org/t/p/w185_and_h278_bestv2";
 const Movie = ({ movie }) => {
   return (
     <Fade bottom cascade>
-      <div className="col-6">
+      <div className="col-md-6 col-sm-12">
         <div className="card mb-5 shadow bg-white" style={{ border: "none" }}>
           <div className="row">
             <div className="col-5">
