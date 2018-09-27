@@ -4,7 +4,7 @@ powered by themoviedb.org API to search movies, and movie information.
 Built with <p>
   <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633710/react-original.svg" width="50" />
   <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633860/css3-original.svg" width="50"/>
-  <img src="https://res.cloudinary.com/yeondam88/image/upload/v1538025976/webpack-original.svg" width="50" />
+  <img src="https://res.cloudinary.com/yeondam88/image/upload/v1537633872/bootstrap-plain.svg" width="50" />
 </p>
 
 ## Demo
