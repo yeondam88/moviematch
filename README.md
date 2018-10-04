@@ -1,4 +1,4 @@
-# Moviematch [Go!](https://movie-match.netlify.com) 
+## Moviematch
 powered by themoviedb.org API to search movies, and movie information.
 
 Built with <p>
@@ -9,6 +9,10 @@ Built with <p>
 
 ## Demo
 <img src="images/optimized.gif" />
+
+## Things I've learned
+* Using third party API to display some data
+* How to make waved background with svg file
 
 ### Features 
 * search a movies 😎
@@ -28,3 +32,10 @@ Built with <p>
 * [Fontawesome](https://github.com/FortAwesome/Font-Awesome)
 * [React Modal Video](https://github.com/appleple/react-modal-video)
 * [themoviedb API](https://developers.themoviedb.org/3)
+
+## Run locally
+```js
+> git clone https://github.com/yeondam88/moviematch.git
+> npm install
+> npm start
+```
