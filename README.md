@@ -33,6 +33,12 @@ Built with <p>
 * [React Modal Video](https://github.com/appleple/react-modal-video)
 * [themoviedb API](https://developers.themoviedb.org/3)
 
+## Features may added
+* Authentication
+* Rating a movies
+* Stored user's data
+* Utilizing themoviedb's API with user interaction
+
 ## Run locally
 ```js
 > git clone https://github.com/yeondam88/moviematch.git
